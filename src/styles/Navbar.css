@@ -1,0 +1,79 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #f5f5f5;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  body.dark .navbar {
+    background-color: #1f1f1f;
+  }
+  
+  body.dark .navbar {
+    background-color: #1f1f1f;
+    color: #eee;
+  }
+  
+  .nav-links a {
+    margin-right: 1rem;
+    color: #222; /* Light mode link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  body.dark .nav-links a {
+    color: #eee; /* Dark mode link color */
+  }
+  
+  .nav-links a:hover {
+    color: rgb(105, 255, 250); /* Or anything you want on hover */
+  }
+  
+  .toggle-btn {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: inherit;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+  
+  .nav-links a:hover {
+    background-color: rgba(255, 105, 180, 0.1); /* hotpink overlay */
+  }
+
+  @media (max-width: 600px) {
+    .navbar {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      box-sizing: border-box;
+    }
+  
+    .nav-links {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      gap: 0.15px;
+      margin-top: 0;
+    }
+  
+    .nav-links a {
+      width: auto;
+      margin-right: 0;
+      padding: 0.5rem 0.75rem;
+    }
+  }

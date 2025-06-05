@@ -1,0 +1,129 @@
+/* Projects Section Styles */
+.projects-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-attachment: fixed;
+  background-image: url('/public/projects-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #111;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body.dark .projects-section {
+  background-image: url('/public/projects-bg-dark.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #eee;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 3rem;
+  column-gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.flip-card {
+  background: transparent;
+  perspective: 1000px;
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+  transform-origin: center;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.flip-front {
+    background: #f0f0f0;
+    color: #111;
+}
+
+.flip-back {
+    background: #333;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+body.dark .flip-front {
+    background: #768df0;
+    color: #111;
+}
+
+body.dark .flip-back {
+    background: #1a1a1a;
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .flip-card {
+    height: 60px;
+    width: 200px;
+    max-width: 100%;
+    margin: 5px auto;
+  }
+
+  .flip-inner {
+    height: 100%;
+  }
+
+  .projects-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@keyframes gradientScroll {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
