@@ -1,8 +1,9 @@
-  import { useState, useEffect } from "react";
-  import Navbar from "./components/Navbar";
-  import Projects from "./components/Projects";
-  import { socials } from "./config/socials";
-  import "./styles/App.css";
+import { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+import { socials } from "./config/socials";
+import "./styles/App.css";
+import { motion } from "framer-motion";
   
   export default function App() {
     const [isDark, setIsDark] = useState(false);
@@ -41,7 +42,13 @@
   
         <Projects />
   
-        <section id="contact" className="contact-section">
+        <motion.section
+          id="contact"
+          className="contact-section"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2>Contact Me</h2>
           <p>Drop me a line or stalk my socials 🤝</p>
           <div className="social-icons">
@@ -58,7 +65,19 @@
               <i className="fas fa-envelope"></i> Gmail
             </a>
           </div>
-        </section>
+          <p className="footer-line">
+            Made with 💖 by Sagnik Biswas. Coded, flipped, styled & deployed like a{" "}
+            <a
+              href="https://youtu.be/VNs_cCtdbPc?si=Sq-npMtNK_XjdLqz"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#8B4513", textDecoration: "underline dotted" }}
+              title="click... if you know, you know 😉"
+            >
+              Brown Munde
+            </a>.
+          </p>
+        </motion.section>
       </div>
     );
   }
