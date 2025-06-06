@@ -1,4 +1,3 @@
-
 .floating-menu {
     position: fixed;
     top: 5rem;
@@ -92,19 +91,24 @@
     .menu-popup {
       position: fixed;
       bottom: 3.5rem;
-      left: 0;
-      width: 100vw;
-      border-radius: 0;
-      box-shadow: none;
-      padding: 1rem 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      max-width: 90vw;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
       flex-direction: row;
-      justify-content: space-around;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
       background: rgba(255,255,255,0.95);
       animation: fadeInMenu 0.3s ease forwards;
       min-width: unset;
     }
   
     .menu-popup a {
-      font-size: 1rem;
+      font-size: 0.85rem;
     }
   }

@@ -9,6 +9,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   line-height: 1.8;
   font-size: 1.05rem;
 }
@@ -121,22 +123,6 @@ body.dark .about-details {
   animation-delay: 0.6s;
 }
 
-.home-button {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #699dad;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  border: 2px solid white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  z-index: 999;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
 .home-button:hover {
   background-color: #4a7683;
@@ -162,10 +148,9 @@ body.dark .about-details {
 
   .about-header,
   .about-details {
-    padding: 0.6rem 0.6rem; /* reduced padding */
-    margin: 0.7rem 0.5rem; /* reduce vertical margin */
-    word-wrap: break-word; /* prevent overflow */
-    overflow-wrap: break-word;
+    max-width: 290px; /* smaller max width for mobile */
+    padding: 1rem;     /* less padding to save space */
+    margin: 0.7rem auto; /* keep centered with automatic horizontal margin */
   }
 
   .home-button {
