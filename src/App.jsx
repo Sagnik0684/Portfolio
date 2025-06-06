@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import { socials } from "./config/socials";
@@ -22,7 +23,9 @@ import { motion } from "framer-motion";
             <div className="intro-text">
               <h1>Hey, I'm <span className="highlight">Sagnik Biswas</span> 👋</h1>
               <p>CS Student | Developer | Dreamer</p>
-              <h2>About Me</h2>
+              <Link to="/about" className="about-link">
+                <h2>About Me</h2>
+              </Link>
               <p>
                 I'm a passionate Computer Science student with a heart full of curiosity
                 and a browser full of Stack Overflow tabs 😅. I build things that solve
@@ -39,7 +42,6 @@ import { motion } from "framer-motion";
             </div>
           </div>
         </section>
-  
         <Projects />
   
         <motion.section
@@ -80,5 +82,4 @@ import { motion } from "framer-motion";
         </motion.section>
       </div>
     );
-  }
-  
+}

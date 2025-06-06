@@ -1,0 +1,144 @@
+.about-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 2rem;
+  background: linear-gradient(-45deg, #ffd3b6, #ffaaa5, #dcedc1, #a8e6cf);
+  background-size: 400% 400%;
+  animation: pastelBg 20s ease infinite;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.about-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-page h2 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+.about-page ul {
+  padding-left: 1.5rem;
+}
+
+body.dark .about-page {
+  color: #eee;
+}
+
+.skills-section {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  padding: 1rem;
+  background: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: bold;
+  color: #333;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: #e0f0ff;
+}
+
+body.dark .skill-card {
+  background: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+}
+
+body.dark .skill-card:hover {
+  background: #2c2c2c;
+}
+
+@keyframes pastelBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.about-header,
+.about-details {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 2rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+body.dark .about-header,
+body.dark .about-details {
+  background: rgba(0, 0, 0, 0.4);
+  color: #eee;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-page h1,
+.about-page h2,
+.about-page p,
+.about-page ul {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.about-page h1 {
+  animation-delay: 0.2s;
+}
+
+.about-page h2 {
+  animation-delay: 0.4s;
+}
+
+.about-page p, .about-page ul {
+  animation-delay: 0.6s;
+}
+
+.home-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #699dad;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 999;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #4a7683;
+  transform: scale(1.05);
+}

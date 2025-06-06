@@ -274,3 +274,15 @@ body.dark .contact-section {
     height: 140px;
   }
 }
+/* Style for .about-link wrapping the About Me heading */
+.about-link h2 {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color:black ;
+}
+
+.about-link h2:hover {
+  color: hotpink;
+  text-decoration: underline;
+  text-decoration-color: hotpink;
+}
