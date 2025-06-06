@@ -278,11 +278,21 @@ body.dark .contact-section {
 .about-link h2 {
   color: black;
   text-decoration: underline;
-  text-decoration-color:black ;
+  text-decoration-color: black;
 }
 
 .about-link h2:hover {
   color: hotpink;
   text-decoration: underline;
+  text-decoration-color: hotpink;
+}
+
+body.dark .about-link h2 {
+  color: #eee;
+  text-decoration-color: #eee;
+}
+
+body.dark .about-link h2:hover {
+  color: hotpink;
   text-decoration-color: hotpink;
 }

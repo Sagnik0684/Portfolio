@@ -142,3 +142,46 @@ body.dark .about-details {
   background-color: #4a7683;
   transform: scale(1.05);
 }
+
+@media (max-width: 600px) {
+  .about-page {
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-page h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-page h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .about-header,
+  .about-details {
+    padding: 0.6rem 0.6rem; /* reduced padding */
+    margin: 0.7rem 0.5rem; /* reduce vertical margin */
+    word-wrap: break-word; /* prevent overflow */
+    overflow-wrap: break-word;
+  }
+
+  .home-button {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .skills-section {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 0.70rem;
+  }
+
+  .skill-card {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+}
