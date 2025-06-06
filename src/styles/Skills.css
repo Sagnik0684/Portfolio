@@ -1,0 +1,116 @@
+
+
+
+.skills-container {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #e3f2fd, #fce4ec, #e0f7fa, #ede7f6);
+  background-size: 400% 400%;
+  animation: bgShift 15s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #007acc;
+}
+
+.progress-bar {
+  background: #ddd;
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill {
+  background: #00bcd4;
+  height: 100%;
+  width: 0;
+  animation: fillProgress 1.5s ease forwards;
+  border-radius: 10px;
+}
+
+.progress-label {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  color: #333;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-width, 100%);
+  }
+}
+
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Dark mode support */
+body.dark .skills-container {
+  background: linear-gradient(-45deg, #121212, #1e1e1e, #212121, #1a1a1a);
+  color: #eee;
+}
+
+body.dark .skill-card {
+  background: rgba(34, 34, 34, 0.9);
+  color: #eee;
+}
+
+body.dark .progress-bar {
+  background: #333;
+}
+
+body.dark .progress-fill {
+  background: #00e5ff;
+}
+
+body.dark .progress-label {
+  color: #ccc;
+}

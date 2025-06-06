@@ -1,17 +1,19 @@
-import { Link } from "react-router-dom";
 import React from "react";
 import "../styles/AboutPage.css";
+import Menu from "./Menu";
 
-export default function About() {
+export default function AboutPage() {
   return (
     <div className="about-page">
-      <Link to="/" className="home-button">← Back to Home</Link>
-
+      <Menu />
+      
+      {/* About Header */}
       <section className="about-header">
         <h1>About Me</h1>
         <p>Everything you might want to know (and some you didn’t ask for 😄)</p>
       </section>
 
+      {/* About Details */}
       <section className="about-details">
         <h2>Who Am I?</h2>
         <p>

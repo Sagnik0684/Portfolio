@@ -5,6 +5,8 @@ import Projects from "./components/Projects";
 import { socials } from "./config/socials";
 import "./styles/App.css";
 import { motion } from "framer-motion";
+import Menu from "./components/Menu";
+
   
   export default function App() {
     const [isDark, setIsDark] = useState(false);
@@ -16,7 +18,7 @@ import { motion } from "framer-motion";
     return (
       <div className="app">
         <Navbar toggleTheme={() => setIsDark(!isDark)} isDark={isDark} />
-  
+          <Menu/>
         <section id="about" className="about-section">
           <div className="intro-container">
             <img src="/profile.jpg" alt="Guddu" className="profile-pic" />
